@@ -6,7 +6,7 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 18:43:42 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/05 18:59:33 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/07 17:10:04 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_strrchr(const char *str, int c)
 	while (str[i] != c && i >= 0)
 		i--;
 	if (i < 0)
-		return ((char*)0);
+		return ((char *)0);
 	else
-		return ((char*)(str + i));
+		return ((char *)(str + i));
 }
 /*
 int	main()

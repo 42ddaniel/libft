@@ -6,7 +6,7 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 13:42:21 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/05 14:01:03 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/07 20:11:43 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		return (0);
 	while (i < n)
 	{
-		dest[i] = src[i];
+		d[i] = s[i];
 		i++;
 	}
 	return (dest);

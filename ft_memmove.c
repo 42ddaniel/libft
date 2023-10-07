@@ -6,7 +6,7 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:02:11 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/05 15:13:31 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/07 19:12:53 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,16 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		while (n--)
 			d[n] = s[n];
 	else
+	{
 		while (i < n)
 		{
 			d[i] = s[i];
 			i++;
 		}
+	}
 	return (dest);
-
 }
-
+/*
 int	main()
 {
 	char s[] = "hello world";
@@ -48,4 +49,4 @@ int	main()
 	memmove(d1, s1, 2);
 	printf("%s", d1);
 }
-
+*/

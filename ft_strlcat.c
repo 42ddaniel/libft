@@ -6,13 +6,13 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:47:05 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/05 11:48:46 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/07 18:55:52 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int	ii;
 	unsigned int	i;

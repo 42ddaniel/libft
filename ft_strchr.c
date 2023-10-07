@@ -6,7 +6,7 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:59:17 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/05 18:34:21 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/07 17:10:25 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *str, int c)
 		str++;
 	}
 	if (*str == (char)c)
-		return ((char*)str);
+		return ((char *)str);
 	else
 		return (0);
 }

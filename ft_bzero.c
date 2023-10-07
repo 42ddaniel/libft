@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diogo <ddaniel-@student.42lisboa.com>      +#+  +:+       +#+        */
+/*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 23:05:22 by diogo             #+#    #+#             */
-/*   Updated: 2023/10/04 23:17:10 by diogo            ###   ########.fr       */
+/*   Created: 2023/10/05 12:29:58 by ddaniel-          #+#    #+#             */
+/*   Updated: 2023/10/07 19:10:06 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -19,7 +19,18 @@ void	ft_bzero(void *s, size_t n)
 	d = s;
 	while (n)
 	{
-		*d++ = 0;
+		*d = 0;
+		d++;
 		--n;
 	}
 }
+/*
+int main()
+{
+    char buffer[] = "Hello big big big big big world";
+
+    printf("Buffer antes de chamar ft_bzero: %s\n", buffer);
+    ft_bzero(buffer, 1);
+    printf("Buffer depois de chamar ft_bzero: %s\n", buffer);
+    return (0);
+}*/

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: diogo <ddaniel-@student.42lisboa.com>      +#+  +:+       +#+        */
+/*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 21:53:37 by diogo             #+#    #+#             */
-/*   Updated: 2023/10/04 22:43:42 by diogo            ###   ########.fr       */
+/*   Created: 2023/10/05 11:51:03 by ddaniel-          #+#    #+#             */
+/*   Updated: 2023/10/07 19:50:27 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -22,7 +22,7 @@ int	ft_atoi(const char *str)
 	res = 0;
 	i = 0;
 	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
-			|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
+		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
@@ -37,15 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-/*
-int main()
-{
-	char str1[] = "1234";
-	char str2[] = "-156793";
-	char str3[] = "+15asd613";
-	char str4[] = "--1263";
-	printf("%d\n", ft_atoi(str1));
-	printf("%d\n", ft_atoi(str2));
-	printf("%d\n", ft_atoi(str3));
-	printf("%d\n", ft_atoi(str4));
-}*/
