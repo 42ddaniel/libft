@@ -1,43 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 15:17:32 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/08 20:20:01 by ddaniel-         ###   ########.fr       */
+/*   Created: 2023/10/08 19:58:43 by ddaniel-          #+#    #+#             */
+/*   Updated: 2023/10/08 20:07:36 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
-	int		srcl;
-
-	i = 0;
-	srcl = 0;
-	if (!src)
-		return (0);
-	while (src[srcl])
-		srcl++;
-	if (!size)
-		return (srcl);
-	while (src[i] && i < (size - 1))
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (srcl);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', 1);
 }
-/*
-int	main()
-{
-	char	src[] = "Hello";
-	char	dest[] = "";
-	ft_strlcpy(dest, src, 4);
-	printf("%s", dest);
-}*/

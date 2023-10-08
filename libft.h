@@ -6,15 +6,17 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:17:28 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/07 20:04:13 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/08 16:18:51 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
