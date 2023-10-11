@@ -6,7 +6,7 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:39:00 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/08 19:51:56 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:32:24 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	ft_putstr_fd(char *s, int fd)
 
 	i = 0;
 	if (!s)
-		return (0);
+		return ;
 	while (s[i])
 	{
-		write(s[i], fd);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }

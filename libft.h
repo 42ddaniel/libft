@@ -6,7 +6,7 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 18:17:28 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/08 16:18:51 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:41:15 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,14 @@ int		ft_isascii(int a);
 int		ft_isprint(int a);
 int		ft_toupper(int a);
 int		ft_tolower(int a);
+
+char	*ft_strdup(const char *s);
+void	*ft_calloc(size_t n, size_t size);
+
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
