@@ -6,11 +6,12 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 21:49:34 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/15 22:45:06 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:05:50 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	ft_digitcount(long int i)
 {
@@ -30,6 +31,16 @@ static int	ft_digitcount(long int i)
 	return (count);
 }
 
+char	ft_equalzero(char *str)
+{
+	if (str == 0)
+	{
+		str = calloc(2, sizeof(char));
+		str[0] = 48;
+	}
+	return (*str);
+}
+
 char	*ft_itoa(int n)
 {
 	long int	numb;
@@ -44,8 +55,7 @@ char	*ft_itoa(int n)
 	str[count--] = 0;
 	if (numb == 0)
 	{
-		str = ft_calloc(2, sizeof(char));
-		str[0] = 48;
+		ft_equalzero(str);
 	}
 	if (numb < 0)
 	{
@@ -59,3 +69,13 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+/*
+int	main()
+{
+	int	i;
+	char	*a;
+
+	i = -123;
+	a = ft_itoa(i);
+	printf("%s", a);
+}*/

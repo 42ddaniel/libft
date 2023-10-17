@@ -6,7 +6,7 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 19:58:43 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/08 20:07:36 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/17 20:20:09 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', 1);
+	write(fd, "\n", 1);
 }

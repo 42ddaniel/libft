@@ -6,50 +6,39 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:36:19 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/15 23:25:03 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/17 19:06:59 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*#include <stdio.h>
+#include <stdlib.h>*/
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		len2;
+	int		totlen;
 	char	*dest;
 	size_t	i;
 
-	len2 = len - start;
-	dest = (char *)malloc(sizeof(char) * (len2 + 1));
+	totlen = len - start;
+	dest = (char*)malloc(sizeof(char) * (totlen + 1));
+	if (!dest)
+		return (NULL);
 	i = start;
-	while (i < len && (*(s + i) != '\0'))
+	while (i < len && s[i] != '\0')
 	{
 		*dest = *(s + i);
 		dest++;
 		i++;
 	}
 	*dest = '\0';
-	return (dest - len2);
+	return (dest - totlen);
 }
-/*	size_t	i;
-	size_t	d;
-	char	*subs;
+/*
+int	main()
+{
+	char const	*s;
 
-	if (!s)
-		return (0);
-	subs = (char *)malloc(sizeof(char) * (len + 1));
-	if (!subs)
-		return (NULL);
-	i = 0;
-	d = 0;
-	while (s[i])
-	{
-		if (i >= start && d < len)
-		{
-			subs[d] = s[i];
-			d++;
-		}
-		i++;
-	}
-	subs[d] = '0';
-	return (subs);
+	s = "substr function Implementation";
+	printf("%s", ft_substr(s, 7, 12));
 }*/
