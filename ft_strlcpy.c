@@ -6,7 +6,7 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 15:17:32 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/08 20:20:01 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/18 00:44:28 by diogo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 
 	i = 0;
 	srcl = 0;
-	if (!src)
+	if (!src || !dest)
 		return (0);
 	while (src[srcl])
 		srcl++;
