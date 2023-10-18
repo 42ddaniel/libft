@@ -6,19 +6,18 @@
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 21:49:34 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/17 17:05:50 by ddaniel-         ###   ########.fr       */
+/*   Updated: 2023/10/18 20:31:18 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_digitcount(long int i)
 {
 	int	count;
 
 	count = 0;
-	if (i < 0)
+	if (i <= 0)
 	{
 		i *= -1;
 		count++;
@@ -30,16 +29,17 @@ static int	ft_digitcount(long int i)
 	}
 	return (count);
 }
-
-char	ft_equalzero(char *str)
+/*
+static char	ft_maisdezero(char *str, long int numb, int count)
 {
-	if (str == 0)
+	while (numb > 0)
 	{
-		str = calloc(2, sizeof(char));
-		str[0] = 48;
+		str[count--] = numb % 10 + 48;
+		numb /= 10;
 	}
 	return (*str);
 }
+*/
 
 char	*ft_itoa(int n)
 {
@@ -49,14 +49,12 @@ char	*ft_itoa(int n)
 
 	numb = n;
 	count = ft_digitcount(numb);
-	str = malloc(count * sizeof(char) + 1);
+	str = (char *)malloc(sizeof(char) * (count + 1));
 	if (!str)
 		return (0);
 	str[count--] = 0;
 	if (numb == 0)
-	{
-		ft_equalzero(str);
-	}
+		str[0] = '0';
 	if (numb < 0)
 	{
 		str[0] = '-';
@@ -75,7 +73,7 @@ int	main()
 	int	i;
 	char	*a;
 
-	i = -123;
+	i = 0;
 	a = ft_itoa(i);
 	printf("%s", a);
 }*/

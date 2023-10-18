@@ -6,7 +6,7 @@
 #    By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/15 22:53:47 by ddaniel-          #+#    #+#              #
-#    Updated: 2023/10/17 18:06:51 by ddaniel-         ###   ########.fr        #
+#    Updated: 2023/10/18 20:46:53 by ddaniel-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,9 +48,9 @@ SRCS =	ft_isalpha.c \
 	ft_strtrim.c \
 	ft_itoa.c \
 
-BONUS_SRCS = #	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
-	#	ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-	#	ft_lstclear.c ft_lstiter.c ft_lstmap.c
+BONUS_SRCS = 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+		ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -62,9 +62,9 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
-#bonus: 
-#	cc -c $(FLAGS) $(SRC_B)
-#	ar rs $(NAME) *.o
+bonus: 
+	cc -c $(FLAGS) $(SRC_B)
+	ar rs $(NAME) *.o
 
 clean:
 	rm -rf $(OBJS) #$(BONUS_OBJS)
