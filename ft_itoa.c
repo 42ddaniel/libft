@@ -29,17 +29,6 @@ static int	ft_digitcount(long int i)
 	}
 	return (count);
 }
-/*
-static char	ft_maisdezero(char *str, long int numb, int count)
-{
-	while (numb > 0)
-	{
-		str[count--] = numb % 10 + 48;
-		numb /= 10;
-	}
-	return (*str);
-}
-*/
 
 char	*ft_itoa(int n)
 {
