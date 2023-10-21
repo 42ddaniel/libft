@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 12:29:58 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/21 15:00:50 by ddaniel-         ###   ########.fr       */
+/*   Created: 2023/10/21 16:11:16 by ddaniel-          #+#    #+#             */
+/*   Updated: 2023/10/21 17:34:33 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*d;
+	t_list	*head;
+	t_list	*temp;
 
-	d = s;
-	while (n)
+	head = 0;
+	while (lst)
 	{
-		*d = 0;
-		d++;
-		--n;
+		temp = ft_lstnew((*f)(lst -> content));
+		if (!temp)
+		{
+			ft_lstclear(&head, del);
+			return (0);
+		}
+		ft_lstadd_back(&head, temp);
+		lst = lst -> next;
 	}
+	return (head);
 }
-/*
-int main()
-{
-    char buffer[] = "Hello big big big big big world";
-
-    printf("Buffer antes de chamar ft_bzero: %s\n", buffer);
-    ft_bzero(buffer, 1);
-    printf("Buffer depois de chamar ft_bzero: %s\n", buffer);
-    return (0);
-}*/

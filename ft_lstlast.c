@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 12:29:58 by ddaniel-          #+#    #+#             */
-/*   Updated: 2023/10/21 15:00:50 by ddaniel-         ###   ########.fr       */
+/*   Created: 2023/10/21 15:28:02 by ddaniel-          #+#    #+#             */
+/*   Updated: 2023/10/21 17:36:53 by ddaniel-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstlast(t_list *lst)
 {
-	char	*d;
-
-	d = s;
-	while (n)
-	{
-		*d = 0;
-		d++;
-		--n;
-	}
+	if (lst == NULL)
+		return (NULL);
+	while (lst -> next)
+		lst = lst -> next;
+	return (lst);
 }
-/*
-int main()
-{
-    char buffer[] = "Hello big big big big big world";
-
-    printf("Buffer antes de chamar ft_bzero: %s\n", buffer);
-    ft_bzero(buffer, 1);
-    printf("Buffer depois de chamar ft_bzero: %s\n", buffer);
-    return (0);
-}*/

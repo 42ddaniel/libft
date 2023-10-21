@@ -6,7 +6,7 @@
 #    By: ddaniel- <ddaniel-@student.42lisboa.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/15 22:53:47 by ddaniel-          #+#    #+#              #
-#    Updated: 2023/10/18 20:46:53 by ddaniel-         ###   ########.fr        #
+#    Updated: 2023/10/21 17:04:10 by ddaniel-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ BONUS_SRCS = 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
 
 OBJS = $(SRCS:.c=.o)
 
-BONUS_OBJS = $(BONUS_SRCS)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 .PHONY: all compile
 
 all: $(NAME)
@@ -62,12 +62,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
-bonus: 
-	cc -c $(FLAGS) $(SRC_B)
-	ar rs $(NAME) *.o
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rc $(NAME) $(BONUS_OBJS) $(OBJS)
 
 clean:
-	rm -rf $(OBJS) #$(BONUS_OBJS)
+	rm -rf $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
